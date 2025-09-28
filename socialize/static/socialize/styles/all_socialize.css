@@ -1,0 +1,86 @@
+section {
+  max-width: auto;
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9; /* Light background for the section */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'myArea myArea myArea';
+  gap: 10px;
+  background-color: #e9fc7d;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
+.socialize-item {
+  margin: 1rem 0;
+  background-color: #43859e;
+  padding: 2rem;
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.socialize-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.socialize-summary {
+  display: flex;
+  align-items: center;
+}
+
+.socialize-image {
+  margin-right: 2rem;
+}
+
+.socialize-image img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff; /* Adds a border to make the image stand out */
+}
+
+.socialize-details h3 {
+  color: #f2f2f2; /* Slightly lighter color for better readability */
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.socialize-details address {
+  font-style: normal; /* For a cleaner look */
+  color: #d0e9f7;
+}
+
+.socialize-actions {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.socialize-actions .btn {
+  background-color: #0df0ed;
+  color: #494949; /* Darker color for better contrast */
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.socialize-actions .btn:hover {
+  background-color: #82dffb;
+  color: #ffffff;
+}
+
+
