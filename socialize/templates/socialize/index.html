@@ -1,0 +1,40 @@
+{% extends 'socialize/bases/base.html' %}
+
+
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block sites_css %}
+<link rel="stylesheet" href="{% static 'socialize/styles/all_socialize.css' %}">
+{% endblock %}
+
+{% block main_headings %}
+Helps students and organizers in event management
+{% endblock %}
+
+{% block header_contents %}
+<p>Check which will be better for you!!</p>
+{% endblock %}
+
+{% block body %}
+<button type="submit"><a href="\main/user_signout/">SignOut</a></button>
+
+<section>
+     <h2>Register  and Browse</h2>
+     <div class="grid-container"> 
+     
+          {% for socialize_item in socialize %}
+     
+          
+               {% include 'socialize/includes/socializes-item.html' with title=socialize_item.title image=socialize_item.image.url location='India' group_name=socialize_item.group_name slug=socialize_item.slug %}
+              
+         
+ 
+     {% endfor %}
+</div>
+     </section>
+
+{% endblock %}
+</body>
+</html>
