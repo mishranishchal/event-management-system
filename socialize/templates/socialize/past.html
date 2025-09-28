@@ -1,0 +1,81 @@
+{% load static %}
+<!-- past_events.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Events</title>
+    <style>
+        /* Add your CSS styles here */
+        .event {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Past Events</h1>
+    <div class="event-list">
+        {% for event in past_events %}
+            <div class="event">
+                <h2>{{ event.title }}</h2>
+                <p><strong>Description:</strong> {{ event.description }}</p>
+                <p><strong>Location:</strong> {{ event.location }}</p>
+                <p><strong>Start Date:</strong> {{ event.start_date }}</p>
+                <p><strong>End Date:</strong> {{ event.end_date }}</p>
+            </div>
+        {% empty %}
+            <p>No past events recorded.</p>
+        {% endfor %}
+    </div>
+
+    <!-- Add your JavaScript scripts here if needed -->
+    <script>
+        // Example JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add your JavaScript logic here
+            console.log('Page loaded');
+        });
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'socialize/styles/past.css' %}">
+    <title>Past Events</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="events-list">
+            <div class="event">
+                <h2>Galgotias Tech Fest 2022</h2>
+                <p><strong>Date:</strong> January 10-12, 2022</p>
+                <p><strong>Venue:</strong> D Block</p>
+                <p><strong>Participants:</strong> Students from various departments</p>
+                <p><strong>Winners:</strong> Team Techies</p>
+                <p><strong>Description:</strong> Galgotias Tech Fest 2022 was a three-day event showcasing the technical prowess of our students. It included coding competitions, robotics challenges, and tech talks by industry experts. Team Techies emerged victorious in the hackathon, demonstrating exceptional problem-solving skills.</p>
+            </div>
+
+            <div class="event">
+                <h2>Intra-College Sports Meet</h2>
+                <p><strong>Date:</strong> March 25, 2022</p>
+                <p><strong>Venue:</strong> Sports Ground</p>
+                <p><strong>Participants:</strong> Students from all departments</p>
+                <p><strong>Winners:</strong> Team Eagles</p>
+                <p><strong>Description:</strong> The Intra-College Sports Meet was a day full of excitement and sportsmanship. Students participated in various sports, including football, cricket, and athletics. Team Eagles demonstrated outstanding teamwork and skills, securing victory in the overall sports meet.</p>
+            </div>
+
+             Add more past events as needed -->
+        <!-- </div>
+    </div>
+
+</body>
+</html> -->
