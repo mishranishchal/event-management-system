@@ -1,0 +1,60 @@
+{% extends 'socialize/bases/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ socialize.title }}{% endblock %}
+
+{% block sites_css %}
+<link rel="stylesheet" href="{% static 'socialize/styles/socializes-detail.css' %}">
+{% endblock %}
+
+{% block main_headings %}
+{{ socialize.title }}
+{% endblock %}
+
+{% block body %}
+
+{% if socialize_found %}
+<article>
+  <img id="main-image" src={{ socialize.image.url }} alt="{{ socialize.title }}">
+
+  <section id="location">
+   <h2>Event Location and Time</h2>
+   <address>This event takes place in <span>{{ socialize.location.name }}</span> ({{ socialize.location.address }}).
+    <p>Date and Time: {{socialize.date}}</p>.</address>
+  </section>
+
+  <section id="details">
+  <h2>The Event/Meetup is for to get together</h2>
+  <p>{{ socialize.description }}</p>
+  <footer>
+  <p>Do want to see more information? Please <a href="mailto:{{ socialize.supervisor_email }}">Contact the event orgraniser</a> (but don't spam us ;-)).</p>
+  </footer>
+  </section>
+
+   <section id="registration">
+     <h2>Registration to Join the Event!</h2>
+     <h4>This form will register you for the event.</h4>
+      <form action="{% url 'socializes-details' socialize.slug %}" method="POST">
+      {% csrf_token %}
+     <ul>
+     {{ registration_form.as_ul }}
+       </ul>
+       <div id="registration-actions">
+        <button type="submit">Register</button>
+      </div>
+     </form>
+   </section>
+  </article>
+
+{% else %}
+<article>
+ <section class="errormessage">
+   <p>OOPs!!!, No  Event Found for this slug, Sorry!!</p>
+ </section>
+ </article>
+{% endif %}
+
+{% endblock %}
+</body>
+</html>
