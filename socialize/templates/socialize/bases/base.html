@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-eqiv="X-UA-Compatible" content="IE=edge"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>{% block title %}Evento Web App{% endblock %}</title>
+ <link rel="stylesheet" href="{% static 'socialize/styles/base.css' %}">
+
+  {% block sites_css%}{% endblock %}
+</head>
+
+<body>
+  <div id="logo"> 
+    <img src="{% static 'socialize/img/event_logo.jpg' %}" alt="Evento Logo" style="max-width: 150px;">
+  </div>
+   <header id="main-header">
+     <nav><a href="\main" id="main-logo">Evento- An Event Organizer WebApp</a></nav>
+     <h1>{% block main_headings %}{% endblock %}</h1>
+     {% block header_contents %}{% endblock %}
+   </header>
+   <main>
+    <div class="parent">
+      <div class="child">
+     {% block body %}
+     {% endblock %}
+      </div>
+    </div>
+   </main>
+</body>
+</html>
