@@ -1,0 +1,33 @@
+{% extends 'socialize/bases/base.html'  %}
+{% load static %}
+{% block body %}
+        <div class="container">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                <strong>Message:</strong> {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            {% endfor %}
+        
+            <h3>Log In to your account!</h3>
+            <form method="post"  action="\main/form/" class="mb-2">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Your Username" Required>
+                </div>
+            </br>
+            </br>
+                <div class="form-group">
+                    <label for="pass1">Password</label>
+                    <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Enter Your Password" Required>
+                </div>
+        
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+        <div>
+            <a href="/main/register/">SIGN UP AS PARTICIPANT</a>
+        </div>
+{% endblock %}
