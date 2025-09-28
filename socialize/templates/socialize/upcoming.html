@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <style>
+        /* Add your CSS styles here */
+        .event {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upcoming Events</h1>
+    <div class="event-list">
+        {% for event in events %}
+            <div class="event">
+                <h2>{{ event.title }}</h2>
+                <p><strong>Description:</strong> {{ event.description }}</p>
+                <p><strong>Location:</strong> {{ event.location }}</p>
+                <p><strong>Start Date:</strong> {{ event.start_date }}</p>
+                <p><strong>End Date:</strong> {{ event.end_date }}</p>
+            </div>
+        {% empty %}
+            <p>No upcoming events at the moment.</p>
+        {% endfor %}
+    </div>
+
+    <!-- Add your JavaScript scripts here -->
+    <script>
+        // Example JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add your JavaScript logic here
+            console.log('Page loaded');
+        });
+    </script>
+</body>
+</html>
