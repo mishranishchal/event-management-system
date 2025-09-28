@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  background: #EDE574;  /* Fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E1F5C4, #EDE574);  /* For Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E1F5C4, #EDE574); /* Standard syntax */
+  color: #323235;
+}
+
+h1, h2, h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #292729;
+  margin-top: 0;
+}
+
+h1 { font-size: 2.5rem; font-weight: 700; }
+h2 { font-size: 2rem; font-weight: 400; }
+h3 { font-size: 1.5rem; font-weight: 300; }
+
+button, .btn {
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0.75rem 1.5rem;
+  background-color: #4a89c3;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #016159;
+  color: #fff;
+}
+
+#main-header {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#main-header h1 {
+  font-size: 3rem; /* Increased size for impact */
+}
+
+#main-logo {
+  font-size: 2.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+  color: #04906d;
+  font-weight: bold;
+}
+
