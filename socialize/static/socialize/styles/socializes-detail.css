@@ -1,0 +1,108 @@
+article {
+  max-width: 60rem;
+  margin: 5rem auto;
+  border-radius: 10px;
+  background-color: #f0f4f8; /* A soft, neutral background */
+  border: none; /* Removing the border for a cleaner look */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  position: relative;
+  padding: 2rem;
+  text-align: left; /* Aligning text to the left for a more standard look */
+  font-family: 'Helvetica Neue', sans-serif; /* Modern, clean font */
+}
+
+#main-image {
+  width: 15rem; /* Larger, more prominent image */
+  height: 15rem;
+  object-fit: cover;
+  position: absolute;
+  top: -7.5rem; /* Adjusting to the new size */
+  left: calc(50% - 7.5rem);
+  border-radius: 50%;
+  border: 5px solid white; /* White border to blend with the background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Adding a subtle shadow */
+}
+
+section:first-of-type {
+  margin-top: 10rem; /* Adjusting top margin */
+}
+
+h2 {
+  font-size: 3rem; /* More prominent headings */
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+address span {
+  font-weight: bold;
+  color: #333;
+}
+
+#details h2 {
+  margin-bottom: 2rem;
+}
+
+#details > p {
+  color: #333; /* Darker color for better readability */
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 90%;
+  margin: 1rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#details footer {
+  color: #999;
+}
+
+#details footer a {
+  color: #007bff; /* Bright link color for contrast */
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+#registration ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#registration label {
+  font-weight: bold;
+  color: #444;
+  margin-right: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#registration input {
+  font: inherit;
+  width: 100%; /* Full width for a modern look */
+  background-color: #eef1f5;
+  border: 2px solid #d1d7dc;
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-sizing: border-box; /* Ensuring padding doesn't affect width */
+}
+
+#registration-actions {
+  margin-top: 2rem;
+}
+
+#registration .errorlist {
+  margin-bottom: 1rem;
+  color: #d9534f; /* Standard bright red for errors */
+}
+
+.errormessage {
+  color: #d9534f; /* Making error messages visible */
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem auto;
+  width: 90%; /* Adjusting width */
+  text-align: center; /* Center aligning the text */
+}
+
+
