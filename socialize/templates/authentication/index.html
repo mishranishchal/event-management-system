@@ -1,0 +1,33 @@
+{% extends 'authentication/bases/base.html'  %}
+{% load static %}
+{% block body %}
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+    {% endfor %}
+
+    <h1>Welcome to EVENTO!</h1>
+
+
+    {% if user.is_authenticated %}
+    <h2>Hello {{fname}}! You are now Registered As an Organizer to Evento.
+    </h2>
+    <h3>YOU CAN NOW CREATE, VIEW AND MONITOR YOUR EVENTS!</h3>
+    <H2><i class="fa fa-bold" aria-hidden="true">Organize Your Events</i></H2>
+    <button type="submit"><a href="\admin/socialize/socialize/add">Let's Organize</a></button>
+  </br>
+</br>
+</br>
+    <button type="submit"><a href="\main/signout/">SignOut</a></button>
+    {% else %}
+    <button type="submit"><a href="\main/signup/">SignUp</a></button>
+    <br/>
+    <br/>
+    <button type="submit"><a href="\main/signin/">SignIn</a></button>
+    {% endif %}
+{% endblock %}
