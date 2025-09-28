@@ -1,0 +1,46 @@
+{% extends 'socialize/bases/base.html' %}
+
+
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block sites_css %}
+<link rel="stylesheet" href="{% static 'socialize/styles/all_socialize.css' %}">
+{% endblock %}
+
+{% block main_headings %}
+Helps students and organizers in event management
+{% endblock %}
+
+{% block body %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message:</strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+{% endfor %}
+
+<h1>Welcome to EVENTO!</h1>
+
+
+{% if user.is_authenticated %}
+<h2>Hello  You are now Registered As an USER/STUDENT to Evento.
+</h2>
+<h3>YOU CAN NOW VIEW AND PARTICIPATE VARIOUS EVENTS</h3>
+<H2><i class="fa fa-bold" aria-hidden="true">Participate in Various Events</i></H2>
+<button type="submit"><a href="\main/socialize/">Let's PARTICIPATE</a></button>
+</br>
+</br>
+</br>
+<button type="submit"><a href="\main/user_signout/">SignOut</a></button>
+{% else %}
+<button type="submit"><a href="\main/register/">SignUp</a></button>
+<br/>
+<br/>
+<button type="submit"><a href="\main/form/">SignIn</a></button>
+{% endif %}
+
+{% endblock %}
