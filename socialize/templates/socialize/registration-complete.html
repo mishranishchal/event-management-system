@@ -1,0 +1,27 @@
+{% extends 'socialize/bases/base.html' %}
+
+{% load static %}
+
+{% block title %}Your impression is complete!!{% endblock %}
+
+{% block sites_css %}
+<link rel="stylesheet" href="{% static 'socialize/styles/registration_success.css' %}">
+{% endblock %}
+
+{% block main_heading %}
+Thanks for your impression!
+{% endblock %}
+
+{% block body %}
+<article>
+<section id="confirmationOne">
+  <h2>Your impression for registration is completed!! Now complete your registration for the event.</h2>
+  <p>Thanks to register at Evento</p>
+</section>
+
+<section id="continueOne">
+  <p>Of course you can mark your impression for sign up for more than one event !</p>
+  <p><a href="/main/socialize/" class="btn">Explore our Events</a></p>
+</section>
+</article>
+{% endblock %}
