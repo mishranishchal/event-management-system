@@ -1,0 +1,29 @@
+{% load static %}
+<!-- announce_winners.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winners Announcement</title>
+</head>
+<body>
+    <h1>Winners Announcement</h1>
+    <div class="winners-list">
+        {% if winners %}
+            <ul>
+                {% for winner in winners %}
+                    <li>
+                        <strong>Event Name:</strong> {{ winner.event_name }}<br>
+                        <strong>Winner Name:</strong> {{ winner.winner_name }}<br>
+                        <strong>Prize:</strong> {{ winner.prize }}<br>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No winners announced yet.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
